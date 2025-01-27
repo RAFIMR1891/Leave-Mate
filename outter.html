@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<body>
+    <title>Online Leave Form</title>
+	<style>
+		body{
+            background: url(pexels-photo-281260.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+		form {
+			max-width: 500px;
+			margin: 40px auto;
+			padding: 20px;
+			background-color: #2bbfc4;
+			border: 1px solid #000000;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		section {
+			margin-bottom: 20px;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		input[type="text"], input[type="number"], input[type="tel"], textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+            border-radius:  40px;
+            margin-left: -0.2cm;
+		}
+		
+		
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+            margin-left: 5cm;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #000a94;
+		}
+	</style>
+</head>
+<body>
+	<form action="sendsms.php" method="post">
+		<section>
+			<h2>Student Information</h2>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="student name"><br><br>
+			<label for="rollno">Roll No.:</label>
+			<input type="text" id="rollno" name="rollno" placeholder="Roll No" required><br><br>
+			<label for="year">Year:</label>
+			<select id="year" name="year">
+				<option value="">Select Year</option>
+				<option value="1st Year">1st Year</option>
+				<option value="2nd Year">2nd Year</option>
+				<option value="3rd Year">3rd Year</option>
+				<option value="4th Year">4th Year</option>
+			</select><br><br>
+			<label for="department">Department:</label>
+			<select id="department" name="department">
+				<option value="">Select Department</option>
+                <option value="AIDS">Artificial intelligence and data science</option>
+				<option value="CSE">Computer Science and Engineering</option>
+				<option value="MECH">Mechanical Engineering</option>
+			</select><br><br>
+			<label for="section">Section:</label>
+            <select name="section" id="sec">
+            <option value="">Select section</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select><br><br>
+			
+		</section>
+		
+		<section>
+			<h2>Leave Details</h2>
+			<label for="from">institution name:</label>
+			<input type="date" id="from" name="from"><br><br>
+         
+			<label for="to">Event name:</label>
+			<input type="date" id="to" name="to"><br><br>
+			<label for="reason">registration</label>
+			<textarea id="reason" name="reason"></textarea><br><br>
+			<label for="cc">contact CC</label>
+			<select name="contact" id="sec">
+				<option value="">Select one</option>
+				<option value="8807444866">Ashwath</option>
+				<option value="cc2">B</option>
+			</select><br><br>
+		</section>
+		
+		<section>
+			<h2>Contact Information</h2>
+			<label for="studentphone">Student Phone Number:</label>
+			<input type="tel" id="studentphone" placeholder="student phone number" name="studentphone" maxlength="10"><br><br>
+			<label for="parentphone">Parent Phone Number:</label>
+			<input type="tel" id="parentphone" name="parentphone" placeholder="parent phone number" maxlength="10"><br><br>
+		</section>
+		
+		<input type="submit" value="Submit">
+	</form>
+    
+</body>
+</html>

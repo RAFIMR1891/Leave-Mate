@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>log in page </title>
+ <link rel="stylesheet" href="leave.css">
+ <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+ </head>
+ <body>
+    <div class="wrapper">
+
+        <form action="leave1.php" method="post">
+            <h1>Hi,Welcome To <span style="animation:fadeIn 2.5s forwards;">LeaveMate</span></h1>
+        <h2>enter your details</h2>
+        <div class="input-box">
+            <input type="text" placeholder="username" required name="username">
+            <i class='bx bxs-user' ></i>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="password" required  id="pass" name="password">
+            <i class='bx bxs-lock-alt' id="icon" ></i>
+        </div>
+    
+        <button type="submit" class="btn" style="border-color: black;" value="log" >Log In</button>
+    </form>
+    </div>
+</body>
+<script>
+    let icon = document.getElementById("icon")
+    let pass= document.getElementById("pass")
+    icon.onmouseover = function(){
+        if(pass.type == "password"){
+            pass.type = "text";        
+        } 
+    }
+    icon.onmouseleave = function(){
+        if( pass.type = "text"){
+            pass.type = "password";
+        }
+    }
+        </script>
+</html> 
